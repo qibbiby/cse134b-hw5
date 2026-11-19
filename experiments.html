@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+
+            <button type="button" id="theme-toggle" hidden>
+                Switch to light mode
+            </button>
+
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>HTML5 Sandbox</h1>
+            <p><em>Live demos, canvas sketches, and small experiments.</em></p>
+
+            <article class="card sandbox-featured">
+                <h2>Featured Demo: 2D Canvas Graphics</h2>
+                <canvas id="sandboxCanvas" width="700" height="280">
+                    Your browser does not support the canvas element.
+                </canvas>
+                <script>
+                    const canvas = document.getElementById('sandboxCanvas');
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+                    img.src = 'assets/rick.webp';
+                    let x = 0;
+                    function animate() {
+                        ctx.fillStyle = '#111111';
+                        ctx.fillRect(0, 0, 700, 280);
+                        ctx.drawImage(img, x % 700, 50, 180, 180);
+                        x += 3;
+                        requestAnimationFrame(animate);
+                    }
+                    img.onload = animate;
+                </script>
+            </article>
+
+            <section class="experiments-grid">
+
+                <article class="card experiment-item">
+                    <h3>Demo 01: Video Tag</h3>
+                    <p><em>HTML5 native video player with poster fallback</em></p>
+                    <video poster="assets/trust.jpg" controls>
+                        <source src="assets/rick.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </article>
+
+                <article class="card experiment-item">
+                    <h3>Demo 02: Audio Tag</h3>
+                    <p><em>HTML5 native audio streaming</em></p>
+                    <audio controls>
+                        <source src="assets/rick.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </article>
+
+                <article class="card experiment-item">
+                    <h3>Demo 03: MathML &amp; Template</h3>
+                    <p><em>Einstein's Mass-Energy Equivalence</em></p>
+
+                    <template id="demo-template">
+                        <p>Hidden template content reserved for DOM clone operations.</p>
+                    </template>
+
+                    <p class="math-display">
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>E</mi>
+                            <mo>=</mo>
+                            <mi>m</mi>
+                            <msup>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                            </msup>
+                        </math>
+                    </p>
+
+                    <p><small>
+                        <strong>Adoption Delay:</strong> MathML was recommended in 1998, but browser adoption stalled when Chrome removed initial support in 2013. Full cross-browser native rendering was restored in Chromium 109 in early 2023.
+                    </small></p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!-- Custom Element #2 -->
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello World!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <hello-world></hello-world>
+
+    <noscript>
+        <p><strong>Notice:</strong> JavaScript is disabled. This portfolio is built using standard semantic HTML5.</p>
+    </noscript>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+
+            <button type="button" id="theme-toggle" hidden>
+                Switch to light mode
+            </button>
+            
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+
+        <section class = "profile-section">
+            <header>
+                <h1>Ahmad Naqib Fitri bin Feizal</h1>
+                <p>CS student &middot; Photographer &middot; Runner</p>
+                <button type="button">See work</button>
+            </header>
+            <picture>
+                <img src="assets/dp.webp" alt="Profile Picture" class="profile-img" width="300" height="300">
+            </picture>
+        </section>
+
+        <section>
+            <h2>About</h2>
+            <p>
+                I am a <b>Computer Science</b> major focused on <b>robust web systems, clean semantic markup, and data management.</b> 
+                <br>Beyond software engineering, I am an active long-distance runner and travel photographer.
+            </p>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+
+</body>
+</html>

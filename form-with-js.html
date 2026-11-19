@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form (with JS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js" defer></script>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="theme.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+
+            <button type="button" id="theme-toggle" hidden>
+                Switch to light mode
+            </button>
+            
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+            
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Form</h1>
+            <form class="card no-js-form js-form" action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>Send a Message</legend>
+                    <p><small>Fields marked with <span class="required">*</span> are required.</small></p>
+
+                    <label for="name">
+                        Name<span class="required">*</span>
+                    </label>
+
+                    <input type="text" id="name" name="name"
+                        autocomplete="name"
+                        placeholder="type name here"
+                        aria-describedby="error-list"
+                        required minlength="1" maxlength="100">
+
+                    <label for="email">
+                        Email<span class="required">*</span>
+                    </label>
+
+                    <input type="email" id="email" name="email"
+                        autocomplete="email"
+                        placeholder="type email here"
+                        aria-describedby="error-list"
+                        required>
+
+                    <label for="comments">
+                        Comments<span class="required">*</span>
+                    </label>
+
+                    <textarea id="comments" name="comments"
+                        rows="4"
+                        placeholder="type feedback here"
+                        aria-describedby="error-list comments-info"
+                        minlength="10" maxlength="10000"
+                        required></textarea>
+
+                    <input type="hidden" id="possible_bot"
+                        name="possible_bot" value="true">
+
+                    <input type="hidden" id="form-errors"
+                        name="form-errors" value="[]">
+
+                    <section id="js-feedback" hidden>
+                        <section aria-live="polite">
+                            <h2>Errors</h2>
+                            <ul id="error-list"></ul>
+                        </section>
+
+                        <section aria-live="polite">
+                            <h2>Information</h2>
+                            <p id="comments-info"></p>
+                        </section>
+                    </section>
+
+                    <button type="submit">send</button>
+                </fieldset>
+            </form>
+                
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+</body>
+</html>

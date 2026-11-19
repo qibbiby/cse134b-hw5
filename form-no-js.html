@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Form</h1>
+            <form class="card no-js-form "action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>Send a Message</legend>
+                    <p><small>Fields marked with <span class="required">*</span> are required.</small></p>
+
+                    <label for="name">Name<span class="required">*</span>
+                        <input type="text" id="name" name="name" 
+                            autocomplete="name" placeholder="type name here" 
+                            required minlength="1" maxlength="100">
+                    </label>
+
+                    <label for="email">Email<span class="required">*</span>
+                        <input type="email" id="email" name="email" 
+                            autocomplete="email" 
+                            placeholder="type email here" required>
+                    </label>
+
+                    <label for="comments">Comments<span class="required">*</span></label> 
+                        <textarea id="comments" name="comments" rows="4" cols="200" 
+                            placeholder="type feedback here" minlength="10" maxlength="10000" 
+                            required></textarea>
+                   
+                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                    
+                    <button type="submit">send</button>
+                </fieldset>
+            </form>
+                
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+</body>
+</html>

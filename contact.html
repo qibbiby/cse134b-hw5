@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+            
+            <button type="button" id="theme-toggle" hidden>
+                Switch to light mode
+            </button>
+
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Get in touch</h1>
+
+            <article class="card contact-card">
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Send a Message</legend>
+                        <p>
+                            <label for="user-name">Name</label><br>
+                            <input type="text" id="user-name" name="name" required placeholder="Your Name">
+                        </p>
+                        <p>
+                            <label for="user-email">Email</label><br>
+                            <input type="email" id="user-email" name="email" required placeholder="your.email@example.com">
+                        </p>
+                        <p>
+                            <label for="user-message">Message</label><br>
+                            <textarea id="user-message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                        </p>
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+
+                <dialog open class="form-dialog">
+                    <h3>Form Notice</h3>
+                    <p>Form submissions are operating in static HTML preview mode for Homework 2.</p>
+                    <button type="button" onclick="this.parentElement.removeAttribute('open')">Dismiss</button>
+                </dialog>
+
+            </article>
+
+        </section>
+
+        <section>
+            <h2>Find me at</h2>
+
+            <section class="contact-grid">
+                <article class="card contact-item">
+                    <h3>Email</h3>
+                    <p>
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <a href="mailto:ahmad.naqib.fitri@gmail.com">ahmad.naqib.fitri@gmail.com</a>
+                    </p>
+                </article>
+
+                <article class="card contact-item">
+                    <h3>GitHub</h3>
+                    <p>
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <a href="https://github.com/qibbiby" target="_blank" rel="noopener">@qibbiby</a>
+                    </p>
+                </article>
+
+                <article class="card contact-item">
+                    <h3>Strava</h3>
+                    <p>
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.92 15.617h4.173"/>
+                        </svg>
+                        <a href="https://strava.app.link/zKgGntjSd7b" target="_blank" rel="noopener">@Naqib Fitri</a>
+                    </p>
+                </article>
+                
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

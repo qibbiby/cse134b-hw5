@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
+
+            <button type="button" id="theme-toggle" hidden>
+                Switch to light mode
+            </button>
+            
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="running.html">Running</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form (No JS)</a></li>
+                <li><a href="form-with-js.html">Form (With JS)</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>My Projects</h1> 
+
+            <article class="card project-card">
+                <picture>
+                    <img src="assets/pnb-hub.webp" alt="PNB Developer Knowledge Hub preview", 
+                    class="project-media", width="500" height="300">
+                </picture>
+                <section class="project-content">
+                    <h2>PNB Developer Knowledge Hub</h2>
+                    <p class="project-subtitle"><em>Enterprise Tooling &middot; Technical Documentation System</em></p>
+                    <p>
+                        An internal documentation platform engineered for <b>Permodalan Nasional Berhad (PNB)</b> to solve scattered SOPs and reduce developer onboarding friction. Designed custom regex formulas for Coda to enable full-text indexing and search keyword highlighting across all code snippets, APIs, and guides. Executed a platform comparison <i>(Notion vs. Coda)</i> that slashed licensing costs by over 80% while restoring content-level searchability.
+                    </p>
+                    <footer class="project-status">
+                        <label for="p1-progress">Development Status:</label><br>
+                        <progress id="p1-progress" value="100" max="100">100%</progress>
+                        <span>100% Completed</span>
+                    </footer>
+                </section>
+            </article>
+
+            <article class="card project-card">
+                <iframe class="project-media" 
+                    width="500" 
+                    height="300" 
+                    src="https://www.youtube.com/embed/GCCjZyGqj8E" 
+                    title="State of Panic Gameplay Demo" 
+                    allowfullscreen>
+                </iframe>
+                
+                <section class="project-content">
+                    <h2>State of Panic</h2>
+                    <p class="project-subtitle"><em>Educational game &middot; US geography</em></p>
+                    <p>
+                        An interactive US geography learning game built around contiguous state graph traversal to 
+                        educate K-12 students on US geography. Features progressive mode unlocks 
+                        (Practice, Classic, Cracked) with reward certificates, real-time combo multipliers with 
+                        idle-decay penalty mechanics, and procedural mini-games testing state spelling and shortest-path state distances.
+                    </p>
+                    <footer class="project-status">
+                        <label for="p2-progress">Development Status:</label><br>
+                        <progress id="p2-progress" value="100" max="100">100%</progress>
+                        <span>100% Completed</span>
+                    </footer>
+                </section>
+            </article>
+        
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CS Portfolio</p>
+    </footer>
+
+</body>
+</html>
